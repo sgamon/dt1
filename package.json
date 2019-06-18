@@ -1,0 +1,15 @@
+{
+  "name": "dt1",
+  "version": "1.0.0",
+  "description": "Helper for playing Death Test 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dt1"
+  },
+  "author": "Scott Gamon",
+  "license": "ISC"
+}
