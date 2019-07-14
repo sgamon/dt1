@@ -1,5 +1,6 @@
-import { defines } from 'defines';
+import {defines} from './defines.js';
 
 defines([
-    'hello-world'
+  'hello-world'
 ]);
+
