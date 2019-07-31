@@ -1,6 +1,6 @@
 import {defines} from './defines.js';
 
 defines([
-  'hello-world'
+  'hello-world', 'random-enemy'
 ]);
 

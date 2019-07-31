@@ -1,4 +1,4 @@
 .idea/
 package-lock.json
 server.js
-
+node_modules/
