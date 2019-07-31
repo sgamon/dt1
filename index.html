@@ -1,22 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>DT1</title>
 
-    <!--
-    <script src="./hello-world.js"></script>
-    <script>
-        window.customElements.define('hello-world', HelloWorld);
-    </script>
-    -->
-
     <script src="./main.js" type="module"></script>
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 3fr
+
+        }
+
+        #container div {
+            border: 1px solid red;
+        }
+
+        .rows {
+            grid-template-rows: 1fr 1fr
+        }
+
+        .rows {
+            border: 1px solid blue;
+        }
+    </style>
 </head>
 <body>
 
 <hello-world></hello-world>
-<random-enemy></random-enemy>
+
+<h1>DT1</h1>
+<div id="container">
+    <div class="rows">
+        <div>bread-crumbs</div>
+        <div>rooms</div>
+        <div>dice</div>
+        <div>map</div>
+    </div>
+    <div class="rows">
+        <div>heroes</div>
+        <div>
+            villians
+            <random-enemy></random-enemy>
+            <random-enemy></random-enemy>
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>

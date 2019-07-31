@@ -8,8 +8,8 @@ export default class {
   iq = 0;
   ma = 0;
   race = 'human';
-  armor = 'none';
-  shield = 'none';
+  armor = 'no armor';
+  shield = '';
   weapons = [];
 
   constructor(props = {}) {
@@ -17,6 +17,6 @@ export default class {
   }
 
   toString() {
-    return `ST ${this.st}, DX ${this.dx}`;
+    return `${this.race} ST ${this.st}, DX ${this.dx} (${this.adjDx}), IQ ${this.iq}. ${this.armor},${this.shield ? ' '+this.shield+', ' : ' '} ${this.weapons.join(', ')}.`;
   }
 }
