@@ -14,9 +14,14 @@ export default class {
 
   constructor(props = {}) {
     Object.assign(this, props);
+    this.id = this.id || `${this.num}-${(new Date()).getTime()}`
   }
 
   toString() {
     return `${this.race} ST ${this.st}, DX ${this.dx} (${this.adjDx}), IQ ${this.iq}. ${this.armor},${this.shield ? ' '+this.shield+', ' : ' '} ${this.weapons.join(', ')}.`;
+  }
+
+  toShortString() {
+    return `${this.race} ST ${this.st}, DX ${this.dx} (${this.adjDx}), IQ ${this.iq}. ${this.armor},${this.shield ? ' '+this.shield : ''}.`;
   }
 }

@@ -21,3 +21,23 @@ Development Plan:
 * Room contents/status.
 * Party stats/inventory.
 * Dynamic map.
+
+### Work Notes
+
+####  1/18/2020
+Among other things, this is an experiment in using W3C web components, and 
+vanilla browser javascript. There is no webpack, or babel, or typescript - for 
+better and for worse. I'm finding it very nice to develop in this environment.
+The module system works fine, you can follow its work in the chrome network
+tab. Native js can be inspected in the chrome debugger, which is wonderful. It
+is easy to reason about the code.
+
+I'm puzzling out how to organize a web app without the benefit of a framework. 
+I'm sure I'm getting lots of things wrong, but finding that out is the fun
+part.
+
+
+
+
+
+

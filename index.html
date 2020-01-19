@@ -14,8 +14,16 @@
 
         }
 
-        #container div {
+        #container > div {
             border: 1px solid red;
+        }
+
+        #container > div.rows > div {
+            border: 1px solid red;
+        }
+
+        #enemies-panel {
+            padding: 5px 5px 5px 5px;
         }
 
         .rows {
@@ -25,11 +33,13 @@
         .rows {
             border: 1px solid blue;
         }
+
+        .random-enemy {
+            padding: 10px 5px 0px 0px;
+        }
     </style>
 </head>
 <body>
-
-<hello-world></hello-world>
 
 <h1>DT1</h1>
 <div id="container">
@@ -41,11 +51,7 @@
     </div>
     <div class="rows">
         <div>heroes</div>
-        <div>
-            villians
-            <random-enemy></random-enemy>
-            <random-enemy></random-enemy>
-        </div>
+        <enemies-panel></enemies-panel>
     </div>
 
 </div>

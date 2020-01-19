@@ -72,13 +72,6 @@ let enemyConfigs = enemiesTable.split('\n').map(enemy => {
 // create a new instance of the DiceRoller
 const roller = new DiceRoller();
 
-// roll the dice
-let roll = roller.roll('3d6');
-
-let enemy = new Enemy(enemyConfigs.filter(config  => config.num === roll.total).pop());
-
-// console.log(roll.total);
-// console.log(enemy);
 
 export default class extends HTMLElement {
   // shadowRoot;
@@ -86,13 +79,32 @@ export default class extends HTMLElement {
   constructor(props = {}) {
     super(props);
     // this.shadowRoot = header.attachShadow({mode: 'open'});
+    let roll = roller.roll('3d6');
+    this.enemy = new Enemy(enemyConfigs.filter(config  => config.num === roll.total).pop());
   }
 
   connectedCallback() {
     this.innerHTML = `
-<h3>Enemy:</h3>
-<div>${enemy}</div>
+<div class="random-enemy">
+  <div><input type="text" size="1"/></div>
+  <div>${this.enemy.toShortString()}</div>
+  <div>${this.weaponSelectorHTML}</div>
+  <div>${this.strengthBarHTML}</div>
+</div>
 `;
+  }
+
+  get strengthBarHTML() {
+    let strengthBarHTML = '';
+    for (let i=0; i<this.enemy.st; i++){strengthBarHTML += '<input type="checkbox"/>'}
+    return strengthBarHTML;
+  }
+
+  get weaponSelectorHTML() {
+    return this.enemy.weapons.reduce((str, weapon) => {
+      str += `<input type="radio" name="weapon-${this.enemy.id}"\> ${weapon}`;
+      return str;
+    }, '');
   }
 }
 
