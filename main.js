@@ -1,13 +1,10 @@
 import {defines} from './defines.js';
 
 defines([
-  'enemies-panel', 'random-enemy'
+  'enemies-panel', 'random-enemy', 'd-6', 'dice-panel'
 ]);
 
 window.addEventListener('DOMContentLoaded', (event) => {
-  // addEvent('addEnemyBtn', 'click', addEnemy);
-  // addEvent('removeEnemyBtn', 'click', removeEnemy);
-  // addEvent('clearEnemiesBtn', 'click', clearEnemies);
 });
 
 //-----------------------------------------------------------------------------

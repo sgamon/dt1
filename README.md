@@ -24,6 +24,31 @@ Development Plan:
 
 ### Work Notes
 
+####  2/15/2020
+
+Dice!
+
+I added the dice panel tonight, which was mostly straight-forward, except for 
+rendering the svgs. I didn't want to load svg files, because (for some reason) 
+it _feels_ right to keep everything inside of the components, or at least a 
+declared import. 
+
+I puttered with various solutions, and ended up with base64 images. But... it 
+felt (that word again) wrong to convert the svg and plop the base64 string 
+inline. So I put the svg strings in the component code (well, a model) and 
+convert to base64 on the fly. This means, theoretically, that I could swap in
+new svgs one day. Is that an actual advantage?
+
+But... at this very late moment in javascript history, there is still no good
+built-in base64 encoder/decoder! Worse, I found nothing on NPM that smoothly
+imported (in pure-browser terms). Frustrated at something that should be easy in
+2020, I cribbed a sample off a website and wrapped it in the export code that 
+turns it into a module.
+
+So... it's done, and I'm happy with it. But I would have saved hours by just 
+direct-loading the svgs (ie, \<img src="some.svg" />). Sigh.
+
+
 ####  1/18/2020
 Among other things, this is an experiment in using W3C web components, and 
 vanilla browser javascript. There is no webpack, or babel, or typescript - for 

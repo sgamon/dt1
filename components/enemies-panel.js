@@ -13,10 +13,6 @@ export default class extends HTMLElement {
     this.tagPrefix = props.tagPrefix || '';
 
     // this.shadowRoot = header.attachShadow({mode: 'open'});
-
-    // this.containerId = 'enemies-panel';
-    // this.preventDefault = preventDefault;
-    // this.addEvent = addEvent.bind(this);
   }
 
   connectedCallback() {
@@ -28,7 +24,7 @@ export default class extends HTMLElement {
         <button type="button" data-btn-id="removeEnemyBtn">-</button>
         <button type="button" data-btn-id="clearEnemiesBtn">Clear</button>
     </div>
-    <hr/>
+
     <div data-panel-id="random-enemies">
         <random-enemy></random-enemy>
         <random-enemy></random-enemy>
