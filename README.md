@@ -24,6 +24,20 @@ Development Plan:
 
 ### Work Notes
 
+####  2/22/2020
+
+Breadcrumbs
+
+I got temporarily hung up on ideas for gold-plating the breadcrumbs. For 
+example, there should (eventually) be a way to persist breadcrumbs so they 
+survive sessions. I decided not to implement anything beyond the most basic 
+stuff.
+
+And yet, there is a fixed starting paragraph, which I started out hard-coding.
+Then I realized I really want to pass in this value using an attribute. Which 
+led to me learning about how to sync attributes and properties. So more 
+learning after all.
+
 ####  2/15/2020
 
 Dice!

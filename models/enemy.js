@@ -22,6 +22,6 @@ export default class {
   }
 
   toShortString() {
-    return `${this.race} ST ${this.st}, DX ${this.dx} (${this.adjDx}), IQ ${this.iq}. ${this.armor},${this.shield ? ' '+this.shield : ''}.`;
+    return `${this.race} ST ${this.st}, DX ${this.dx} (${this.adjDx}), IQ ${this.iq}. ${this.armor}${this.shield ? ', '+this.shield : ''}.`;
   }
 }

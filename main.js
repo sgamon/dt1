@@ -1,7 +1,7 @@
 import {defines} from './defines.js';
 
 defines([
-  'enemies-panel', 'random-enemy', 'd-6', 'dice-panel'
+  'enemies-panel', 'random-enemy', 'd-6', 'dice-panel', 'breadcrumb-panel'
 ]);
 
 window.addEventListener('DOMContentLoaded', (event) => {

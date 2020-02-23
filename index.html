@@ -92,6 +92,35 @@
             border-bottom: 1px dotted dimgrey;
         }
 
+        #breadcrumb-panel {
+            padding: 5px 5px 5px 5px;
+        }
+
+        #breadcrumb-panel > form {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted dimgrey;
+        }
+
+        #breadcrumb-panel > form > div > input[type=text] {
+            width: 75px;
+            display: inline-block;
+        }
+
+        #breadcrumb-panel > form > div > label {
+            width: 100px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        #breadcrumb-panel > form .form-buttons {
+            text-align: center;
+            padding: 10px;
+        }
+
+        #breadcrumb-panel > form .form-buttons button {
+            text-size: 1.5em;
+        }
 
     </style>
 
@@ -101,7 +130,7 @@
 <h1>DT1</h1>
 <div id="container">
     <div class="rows">
-        <div>bread-crumbs</div>
+        <breadcrumb-panel first-paragraph="42"></breadcrumb-panel>
         <div>rooms</div>
         <dice-panel></dice-panel>
         <div>map</div>
