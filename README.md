@@ -24,6 +24,16 @@ Development Plan:
 
 ### Work Notes
 
+####  4/12/2020
+
+Names
+
+I found a list of over 6,000 medieval names online. I put them into a model so
+enemies can now have unique names. I remember playing Star Wars Battlefront, 
+where every AI enemy on the field had a name. When you died, the game told you 
+who killed you. And at the end of a battle, the AI stats were listed alongside
+the human players. It is a neat bit of flavor. 
+
 ####  2/22/2020
 
 Breadcrumbs

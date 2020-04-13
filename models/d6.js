@@ -39,7 +39,6 @@ export default class {
 
   base64Face(pips=1) {
     this.checkRange(pips, 'base64Face');
-    let base64Face = Base64.encode(this.svgFace(pips));
     return Base64.encode(this.svgFace(pips));
   }
 
