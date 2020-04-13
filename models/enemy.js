@@ -18,7 +18,7 @@ export default class {
   }
 
   toString() {
-    return `${this.race} ST ${this.st}, DX ${this.dx} (${this.adjDx}), IQ ${this.iq}. ${this.armor},${this.shield ? ' '+this.shield+', ' : ' '} ${this.weapons.join(', ')}.`;
+    return `${this.race} ST ${this.st}, DX ${this.dx} (${this.adjDx}), IQ ${this.iq}. ${this.armor}${this.shield ? ', '+this.shield+', ' : ' '} ${this.weapons.join(', ')}.`;
   }
 
   toShortString() {

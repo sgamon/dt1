@@ -10,7 +10,7 @@ function toDashCase(str = '') {
  * @param {string} folder path to find custom element classes
  * @param {string} prefix applied to tagnames to create a custom namespace
  */
-export function defines(tagnames = [], folder = 'components', prefix = '') {
+export function defineComponents(tagnames = [], folder = 'components', prefix = '') {
   tagnames
     .forEach(async tag => {
         const prefixedTag = prefix ? toDashCase(`${prefix} ${tag}`) : toDashCase(tag);

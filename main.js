@@ -1,6 +1,6 @@
-import {defines} from './defines.js';
+import {defineComponents} from './defineComponents.js';
 
-defines([
+defineComponents([
   'enemies-panel', 'random-enemy', 'd-6', 'dice-panel', 'breadcrumb-panel'
 ]);
 
