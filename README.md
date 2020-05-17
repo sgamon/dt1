@@ -24,6 +24,15 @@ Development Plan:
 
 ### Work Notes
 
+####  5/16/2020
+
+Started removing semi-colons from the line ending. Very avant-garde. I like it.
+Makes the code easier on the eyes.
+
+Also moved tag styling into the tag. Trying for a sealed box. 
+
+Looks like I'm going to end up creating my own class at some point. 
+
 ####  4/12/2020
 
 Names

@@ -53,74 +53,14 @@
             border-top: 1px dotted dimgrey;
         }
 
-        .d-6 {
-            width: 50px;
-            height: 50px;
-            display: inline-block;
-        }
-
         #dice-panel {
             padding: 5px 5px 5px 5px;
-        }
-
-        #dice-panel > form > div > input[type=number] {
-            width: 75px;
-            display: inline-block;
-        }
-
-        #dice-panel > form > div > label {
-            width: 100px;
-            display: inline-block;
-            text-align: right;
-        }
-
-        #dice-panel > form {
-            margin-bottom: 10px;
-            border-bottom: 1px dotted dimgrey;
-        }
-
-        #dice-panel > form .form-buttons {
-            text-align: center;
-            padding: 10px;
-        }
-
-        #dice-panel > form .form-buttons button {
-            text-size: 1.5em;
-        }
-
-        div[data-panel-id="die-rolls"] {
-            border-bottom: 1px dotted dimgrey;
         }
 
         #breadcrumb-panel {
             padding: 5px 5px 5px 5px;
         }
 
-        #breadcrumb-panel > form {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px dotted dimgrey;
-        }
-
-        #breadcrumb-panel > form > div > input[type=text] {
-            width: 75px;
-            display: inline-block;
-        }
-
-        #breadcrumb-panel > form > div > label {
-            width: 100px;
-            display: inline-block;
-            text-align: right;
-        }
-
-        #breadcrumb-panel > form .form-buttons {
-            text-align: center;
-            padding: 10px;
-        }
-
-        #breadcrumb-panel > form .form-buttons button {
-            text-size: 1.5em;
-        }
 
     </style>
 
@@ -131,7 +71,27 @@
 <div id="container">
     <div class="rows">
         <breadcrumb-panel first-paragraph="42"></breadcrumb-panel>
-        <div>rooms</div>
+        <div>
+            <h3>rooms</h3>
+
+            <form name="foo">
+                <div>
+                    <input name="" type="text"><button type="button">+</button>
+                </div>
+                <div>
+                    <select name="key">
+
+                    </select>
+                </div>
+
+                <div>
+                    <textarea name="value"></textarea>
+                </div>
+
+
+            </form>
+
+        </div>
         <dice-panel></dice-panel>
         <div>map</div>
     </div>
