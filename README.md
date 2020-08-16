@@ -24,6 +24,19 @@ Development Plan:
 
 ### Work Notes
 
+####  8/15/2020
+
+Rooms
+
+The rooms panel lets you note the rooms you visit, and make notes (like 
+treasure and remaining foes, should you return).
+
+As I work on this project, I find myself slowing re-inventing Backbone, lol. 
+
+I decided to defer persistance to the end. Everything is in memory, and gets
+blown away on refresh. I plan to solve that problem for all components in one 
+swoop. 
+
 ####  5/16/2020
 
 Started removing semi-colons from the line ending. Very avant-garde. I like it.

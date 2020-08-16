@@ -18,6 +18,7 @@
 
         h3 {
             margin: 10px 0px;
+            background-color: lightgray;
         }
 
         #container {
@@ -71,27 +72,7 @@
 <div id="container">
     <div class="rows">
         <breadcrumb-panel first-paragraph="42"></breadcrumb-panel>
-        <div>
-            <h3>rooms</h3>
-
-            <form name="foo">
-                <div>
-                    <input name="" type="text"><button type="button">+</button>
-                </div>
-                <div>
-                    <select name="key">
-
-                    </select>
-                </div>
-
-                <div>
-                    <textarea name="value"></textarea>
-                </div>
-
-
-            </form>
-
-        </div>
+        <rooms-panel></rooms-panel>
         <dice-panel></dice-panel>
         <div>map</div>
     </div>

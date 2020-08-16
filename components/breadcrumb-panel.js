@@ -6,30 +6,14 @@ import {getNumericFormValue} from './helpers/getNumericFormValue.js'
 
 export default class extends HTMLElement {
   css = [
-    `#breadcrumb-panel > form {
+  `#breadcrumb-panel > form {
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px dotted dimgrey;
   }`,
 
-    `#breadcrumb-panel > form > div > input[type=text] {
-    width: 75px;
-    display: inline-block;
-  }`,
-
-    `#breadcrumb-panel > form > div > label {
-    width: 100px;
-    display: inline-block;
-    text-align: right;
-  }`,
-
-    `#breadcrumb-panel > form .form-buttons {
-    text-align: center;
-    padding: 10px;
-  }`,
-
-    `#breadcrumb-panel > form .form-buttons button {
-    text-size: 1.5em;
+  `#breadcrumb-panel > form > div > input[type=text] {
+    width: 6em;
   }`,
   ]
 
@@ -55,10 +39,7 @@ export default class extends HTMLElement {
     <h3>Bread-crumbs</h3>
     <form name="breadcrumbForm">
         <div class="form-input">
-          <label>Paragraph</label>
-          <input type="text" value="" name="number" autocomplete="off"  />
-        </div>
-        <div class="form-buttons">
+          <input type="text" value="" name="number" autocomplete="off"  placeholder="paragraph #" size="13" />
           <button type="button" data-btn-id="addBreadcrumbBtn">Add</button>
           <button type="button" data-btn-id="clearBreadcrumbsBtn">Clear</button>
         </div>
@@ -69,6 +50,7 @@ export default class extends HTMLElement {
 
     this.addEvent('[data-btn-id="addBreadcrumbBtn"]', 'click', this.addBreadcrumb)
     this.addEvent('[data-btn-id="clearBreadcrumbsBtn"]', 'click', this.clearBreadcrumbs)
+    this.addEvent('> form', 'submit', this.addBreadcrumb)
 
     this.updateBreadcrumbs()
   }
@@ -91,9 +73,11 @@ export default class extends HTMLElement {
 
   addBreadcrumb(e) {
     this.preventDefault(e)
-    this.breadcrumbs.push(this.breadcrumb)
-    this.clearBreadcrumb()
-    this.updateBreadcrumbs()
+    if (!Number.isNaN(this.breadcrumb)) {
+      this.breadcrumbs.push(this.breadcrumb)
+      this.clearBreadcrumb()
+      this.updateBreadcrumbs()
+    }
   }
 
   updateBreadcrumbs() {

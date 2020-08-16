@@ -1,6 +1,8 @@
 import { DiceRoller } from '../node_modules/rpg-dice-roller/lib/esm/bundle.min.js';
 import Enemy from '../models/enemy.js';
 import Names from '../models/names.js';
+import {applyStyles} from './helpers/applyStyles.js'
+
 
 const enemiesTable = `3. ST 15, DX 14 (11), IQ 10. Chainmail, battleaxe, two-handed sword.
 4. ST 14, DX 13 (11). Leather, two-handed sword, light crossbow.
@@ -71,26 +73,33 @@ let enemyConfigs = enemiesTable.split('\n').map(enemy => {
 
 
 // create a new instance of the DiceRoller
-const roller = new DiceRoller();
-const names = new Names();
+const roller = new DiceRoller()
+const names = new Names()
 
 
 export default class extends HTMLElement {
   // shadowRoot;
 
+  css = [
+    `div.random-enemy > div > input {width: 1em;}`
+  ]
+
+  applyStyles = applyStyles;
+
   constructor(props = {}) {
     super(props);
     // this.shadowRoot = header.attachShadow({mode: 'open'});
-    let roll = roller.roll('3d6');
-    let config = enemyConfigs.filter(config  => config.num === roll.total).pop();
-    config.name = names.pick();
-    this.enemy = new Enemy(config);
+    this.applyStyles()
+    let roll = roller.roll('3d6')
+    let config = enemyConfigs.filter(config  => config.num === roll.total).pop()
+    config.name = names.pick()
+    this.enemy = new Enemy(config)
   }
 
   connectedCallback() {
     this.innerHTML = `
 <div class="random-enemy">
-  <div><input type="text" size="1"/> ${this.enemy.name}</div>
+  <div><input type="text" size="3" placeholder="id"/> ${this.enemy.name}</div>
   <div>${this.enemy.toShortString()}</div>
   <div>${this.weaponSelectorHTML}</div>
   <div>${this.strengthBarHTML}</div>
