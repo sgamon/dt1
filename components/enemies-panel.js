@@ -18,7 +18,7 @@ export default class extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
 <div id="${this.containerId}">
-    <h3>Enemies</h3>
+    <h3>Random Enemies</h3>
     <div>
         <button type="button" data-btn-id="addEnemyBtn">+</button>
         <button type="button" data-btn-id="removeEnemyBtn">-</button>

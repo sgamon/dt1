@@ -10,6 +10,7 @@
     <style>
         body {
             font-size: 1.5em;
+            background-color: whitesmoke;
         }
 
         input {
@@ -27,10 +28,6 @@
 
         }
 
-        #container > div {
-            border: 1px solid red;
-        }
-
         #container > div.rows > div {
             border: 1px solid red;
             padding: 5px;
@@ -42,10 +39,6 @@
 
         .rows {
             grid-template-rows: 1fr 1fr
-        }
-
-        .rows {
-            border: 1px solid blue;
         }
 
         .random-enemy {
@@ -62,7 +55,15 @@
             padding: 5px 5px 5px 5px;
         }
 
-
+        #dragonImg img {
+            display: block;
+            transform: scale(-1,1);
+            width: 100%;
+        }
+        #dragonImg a {
+            font-size: small;
+            color: dimgray;
+        }
     </style>
 
 </head>
@@ -88,6 +89,11 @@
         <enemies-panel></enemies-panel>
     </div>
 
+</div>
+
+<div id="dragonImg">
+    <img src="images/svg/dungeon.svg">
+    <a href="https://www.vecteezy.com/free-vector/dragon">Dragon Vectors by Vecteezy</a>
 </div>
 
 </body>
